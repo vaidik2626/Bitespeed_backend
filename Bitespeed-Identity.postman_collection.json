@@ -1,0 +1,70 @@
+{
+  "info": {
+    "name": "Bitespeed Identity API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-987654321000",
+    "description": "Collection to test Identify API with primary and secondary contacts",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Primary Contact",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"lorraine@hillvalley.edu\",\n  \"phoneNumber\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/identify",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["identify"]
+        }
+      }
+    },
+    {
+      "name": "Add Secondary Contact",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"mcfly@hillvalley.edu\",\n  \"phoneNumber\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/identify",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["identify"]
+        }
+      }
+    },
+    {
+      "name": "Create Another Primary",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"doc@hillvalley.edu\",\n  \"phoneNumber\": \"999999\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/identify",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["identify"]
+        }
+      }
+    }
+  ]
+}
